@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6593404687.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Lionel Messi Website | Slide Menu Mobile Responsive</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- nav tag is very important in the positioning -->
+
+        <nav class="navbar">
+          <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+              <svg width="60" height="60">
+                <path d="M0,5 50,5" stroke="#fff" stroke-width="5" />
+                <path d="M0,14 50,14" stroke="#fff" stroke-width="5" />
+                <path d="M0,23 50,23" stroke="#fff" stroke-width="5" />
+              </svg>
+            </a>
+          </span>
+          <ul class="navbar-hor">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Goals</a></li>
+          </ul>
+        </nav>
+        <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-x" onclick="closeSlideMenu()">&times;</a>
+          <a href="#">Home</a>
+          <a href="#">History</a>
+          <a href="#">Transfers</a>
+          <a href="#">Goals</a>
+        </div>
+      </header>
+      <div class="strip">
+        <video src="lionel.mp4" autoplay muted loop type="mp4"></video>
+        <div class="textBox" id="main">
+          <h2>
+            Lionel Messi:
+            <span
+              class="txt-type"
+              data-wait="3000"
+              data-words='["LEGEND", "FULL OF ENERGY", "FIDGETY", "HYPERACTIVE"]'
+            ></span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+            doloribus dolores, labore praesentium, ea sequi ipsam tempora minima
+            cumque explicabo ad fuga magni eius modi. Doloremque explicabo
+            quidem fuga ullam.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="imgBox">
+          <img src="lionel.png" />
+        </div>
+        <div class="icons" id="icons">
+          <a href="#!">
+            <i class="fab fa-twitter fa-3x"></i>
+          </a>
+          <a href="#!">
+            <i class="fab fa-facebook fa-3x"></i>
+          </a>
+          <a href="#!">
+            <i class="fab fa-instagram fa-3x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- script for typewriter effect -->
+    <script src="app.js"></script>
+    <script>
+      // entering script for slide menu
+      function openSlideMenu() {
+        document.getElementById("side-menu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("icons").style.marginLeft = "250px";
+      }
+      function closeSlideMenu() {
+        document.getElementById("side-menu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("icons").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
